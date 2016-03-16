@@ -5,11 +5,12 @@ var now = moment();
 // console.log(now.format('X'));
 // console.log(now.valueOf());
 
-var timestamp = 1458137918269;
-var timestampMoment = moment.utc(timestamp);
+// var timestamp = 1458137918269;
+// var timestampMoment = moment.utc(timestamp);
 
-console.log(timestampMoment.local().format('h:mm a'));
 
+// console.log(timestampMoment.local().format('h:mm a'));
+console.log(moment().format('h:mm A'));
 
 
 // now.subtract(1, 'year');
