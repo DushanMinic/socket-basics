@@ -13,6 +13,23 @@ io.on('connection', function (socket) {
 	console.log('Korisnik konektovan kroz socket.io!');
 
 
+
+
+	socket.on('disconnect', function () {
+		var userData = clientInfo[socket.id];
+
+		if(typeof userData !== 'undefined') {
+			socket.leave(userData.room);
+			io.to(userData.room).emit('message', {
+				name: 'System',
+				text: 'Korisnik ' + '<strong>' + userData.name + '</strong>' + ' je napustio sobu!',
+				timestamp: moment().valueOf()
+			});
+			delete clientInfo[socket.id];
+		}
+	});
+
+
 	socket.on('joinRoom', function (req) {
 		clientInfo[socket.id] = req;
 
