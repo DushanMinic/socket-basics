@@ -12,3 +12,23 @@ h1 {
 .messages p {
 	margin: 6px 0;
 }
+
+body {
+		background: url('http://thakorweb.com/img/background.jpg')no-repeat center center fixed; 
+  		background-size: cover;
+		background-size: cover;
+		background-size: cover;
+		background-size: cover;
+	}
+
+.footer {
+	background-color: black;
+	border: 0;
+}
+
+#wtf {
+	font-family: 'Exo', sans-serif;
+	font-size: 120%;
+	color: #000000;
+	text-decoration: underline;
+}

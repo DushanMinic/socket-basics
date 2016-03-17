@@ -86,7 +86,7 @@ io.on('connection', function (socket) {
 
 	socket.emit('message', {
 		name: 'System',
-		text: 'Dobrodosli na chat!',
+		text: 'Dobrodošli na chat!',
 		timestamp: moment().valueOf()
 	});
 });
